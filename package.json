@@ -1,0 +1,22 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "portfolio_website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikosamofa/portfolioWebSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikosamofa/portfolioWebSite/issues"
+  },
+  "homepage": "https://github.com/nikosamofa/portfolioWebSite#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
