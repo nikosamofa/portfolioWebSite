@@ -30,10 +30,12 @@ img{
 // logo
 
 #logo{
-  width: 70px;
-  height: 70px;
+  font-size: 34px;
   color: #fff;
   text-transform: uppercase;
+  margin-left: 20px;
+  margin-top: 3px;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 //main Nav
@@ -67,13 +69,14 @@ img{
 
 //Header 
 
-header {
+#header {
+  // Header Home
   &-home{
     background:$bg-image no-repeat center right /cover;
     height: 100vh;
     color: #fff;
     
-//Header Home
+//Header content
     .header-content{
       text-align: center;
       padding-top: 20%;
@@ -90,4 +93,129 @@ header {
   &-inner{
 
   }
+}
+
+//Home-sections A
+
+#home{
+  &-a{
+    .specials{
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      .fas{
+        color:$main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  //Home section B
+  &-b{
+    .stats{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      li{
+        line-height: 2;
+        &.stats-title{
+          font-size: 2rem;
+        }
+        &.stats-number{
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+      div{
+        padding:3rem 0;
+        &:nth-child(odd){
+          background:$light-color;
+        }
+        &:nth-child(even){
+          background:$medium-color
+        }
+      }
+    }
+  }
+  // Home Section C
+  &-c{
+    .process{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap:1.5rem;
+      text-align: center;
+      //process-step
+
+      &-step{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height:15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+      //Process-icon
+
+      &-icon{
+        border-radius: 50%;
+        background:$dark-color;
+        color: set-text-color($dark-color);
+        padding:2rem;
+        width: 70px;
+        height: 70px;
+        line-height:70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover{
+          background:$main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step{
+            background:$dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+
+#main-footer{
+  background:$dark-color;
+  color:#fff;
+  height: 5rem;
+
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab{
+      margin-right:1rem;
+      border:2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding:0.5rem;
+    &:hover{
+  background:$main-color;
+}
+    }
+  }
+
 }
